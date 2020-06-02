@@ -2,18 +2,20 @@
 
 # Form implementation generated from reading ui file 'ui_minewx.ui'
 #
-# Created by: PyQt5 UI code generator 5.11.3
+# Created by: PyQt5 UI code generator 5.14.2
 #
 # WARNING! All changes made in this file will be lost!
 
+
 from PyQt5 import QtCore, QtGui, QtWidgets
+
 
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(850, 600)
-        Form.setMinimumSize(QtCore.QSize(850, 600))
-        Form.setMaximumSize(QtCore.QSize(850, 600))
+        Form.resize(1010, 600)
+        Form.setMinimumSize(QtCore.QSize(1010, 600))
+        Form.setMaximumSize(QtCore.QSize(1010, 600))
         Form.setStyleSheet("QWidget{\n"
 "font: 75 10pt \"微软雅黑\";\n"
 "}\n"
@@ -21,10 +23,10 @@ class Ui_Form(object):
 "background-color:rgb(255, 85, 255);/*会被背景透明*/\n"
 "}\n"
 "")
-        self.Layout_Form = QtWidgets.QHBoxLayout(Form)
-        self.Layout_Form.setContentsMargins(0, 0, 0, 0)
-        self.Layout_Form.setSpacing(0)
-        self.Layout_Form.setObjectName("Layout_Form")
+        self.horizontalLayout = QtWidgets.QHBoxLayout(Form)
+        self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout.setSpacing(0)
+        self.horizontalLayout.setObjectName("horizontalLayout")
         self.verticalWidget_1 = QtWidgets.QWidget(Form)
         self.verticalWidget_1.setMinimumSize(QtCore.QSize(60, 600))
         self.verticalWidget_1.setMaximumSize(QtCore.QSize(60, 600))
@@ -132,7 +134,7 @@ class Ui_Form(object):
         self.toolButton_19logout.setIconSize(QtCore.QSize(30, 30))
         self.toolButton_19logout.setObjectName("toolButton_19logout")
         self.verticalLayout_1.addWidget(self.toolButton_19logout)
-        self.Layout_Form.addWidget(self.verticalWidget_1)
+        self.horizontalLayout.addWidget(self.verticalWidget_1)
         self.verticalWidget_2 = QtWidgets.QWidget(Form)
         self.verticalWidget_2.setMinimumSize(QtCore.QSize(250, 600))
         self.verticalWidget_2.setMaximumSize(QtCore.QSize(250, 600))
@@ -310,7 +312,7 @@ class Ui_Form(object):
         self.stackedWidget_1.addWidget(self.page_23)
         self.verticalLayout_22.addWidget(self.stackedWidget_1)
         self.verticalLayout_2.addWidget(self.verticalWidget_22)
-        self.Layout_Form.addWidget(self.verticalWidget_2)
+        self.horizontalLayout.addWidget(self.verticalWidget_2)
         self.verticalWidget_3 = QtWidgets.QWidget(Form)
         self.verticalWidget_3.setMinimumSize(QtCore.QSize(0, 600))
         self.verticalWidget_3.setMaximumSize(QtCore.QSize(16777215, 600))
@@ -638,7 +640,41 @@ class Ui_Form(object):
         self.textEdit_output.setObjectName("textEdit_output")
         self.verticalLayout_33.addWidget(self.textEdit_output)
         self.verticalLayout_3.addWidget(self.verticalWidget_33)
-        self.Layout_Form.addWidget(self.verticalWidget_3)
+        self.horizontalLayout.addWidget(self.verticalWidget_3)
+        self.verticalLayout_15 = QtWidgets.QVBoxLayout()
+        self.verticalLayout_15.setContentsMargins(1, 1, 1, 1)
+        self.verticalLayout_15.setSpacing(1)
+        self.verticalLayout_15.setObjectName("verticalLayout_15")
+        self.label_3 = QtWidgets.QLabel(Form)
+        self.label_3.setStyleSheet("QLabel\n"
+"{\n"
+"color: rgb(255, 0, 0);\n"
+"background-color: rgb(255, 255, 255);\n"
+"font: 75 15pt \"3ds\";\n"
+"\n"
+"}\n"
+"")
+        self.label_3.setObjectName("label_3")
+        self.verticalLayout_15.addWidget(self.label_3)
+        self.text_in_1 = QtWidgets.QTextEdit(Form)
+        self.text_in_1.setMinimumSize(QtCore.QSize(0, 22))
+        self.text_in_1.setObjectName("text_in_1")
+        self.verticalLayout_15.addWidget(self.text_in_1)
+        self.text_in_2 = QtWidgets.QTextEdit(Form)
+        self.text_in_2.setMinimumSize(QtCore.QSize(0, 22))
+        self.text_in_2.setObjectName("text_in_2")
+        self.verticalLayout_15.addWidget(self.text_in_2)
+        spacerItem5 = QtWidgets.QSpacerItem(20, 248, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_15.addItem(spacerItem5)
+        self.verticalLayout_15.setStretch(0, 1)
+        self.verticalLayout_15.setStretch(1, 1)
+        self.verticalLayout_15.setStretch(2, 1)
+        self.verticalLayout_15.setStretch(3, 12)
+        self.horizontalLayout.addLayout(self.verticalLayout_15)
+        self.horizontalLayout.setStretch(0, 1)
+        self.horizontalLayout.setStretch(1, 4)
+        self.horizontalLayout.setStretch(2, 8)
+        self.horizontalLayout.setStretch(3, 4)
 
         self.retranslateUi(Form)
         self.stackedWidget_1.setCurrentIndex(0)
@@ -685,5 +721,5 @@ class Ui_Form(object):
         self.label_busy.setText(_translate("Form", "编辑回复内容："))
         self.checkBox_robot.setText(_translate("Form", "机器人回复"))
         self.label_2.setText(_translate("Form", "帮助信息"))
-
+        self.label_3.setText(_translate("Form", "备注名称关键字排除"))
 import img_rc

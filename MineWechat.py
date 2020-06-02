@@ -354,7 +354,19 @@ class MyWindow(QtWidgets.QWidget, Ui_Form):          # 注意Ui_Form要跟UI文�
             self.output_info("您还没有选择好友！")
         else:
             for friend_element in text_friends:
-                search_name = self.thread.bot.friends().search(friend_element)[0]
+                if "北京同事" in friend_element:
+                    continue
+                text1 = self.text_in_1.toPlainText()
+                if  len(text1) > 0:
+                    result = text1 in friend_element
+                    if result == True:
+                        continue 
+                text2 = self.text_in_2.toPlainText()
+                if  len(text2) > 0:
+                    result = text2 in friend_element
+                    if result == True:
+                        continue 
+                search_name = self.thread.bot.friends().search(name = friend_element)[0]
                 #print(search_name)
                 if search_name:
                     search_name.send(text_send)
